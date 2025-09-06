@@ -43,7 +43,7 @@ const Home = () => {
             >
               <Box
                 component="img"
-                src="/humblepearl.jpg"
+                src="/humble-pearl-catering/humblepearl.jpg"
                 alt="Humble Pearl Logo"
                 sx={{
                   width: '120%',
