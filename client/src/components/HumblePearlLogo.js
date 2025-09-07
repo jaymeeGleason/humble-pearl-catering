@@ -16,6 +16,11 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
     ...sx
   };
 
+  const pearlContainerStyles = {
+    position: 'relative',
+    marginRight: '12px',
+  };
+
   const pearlStyles = {
     width: isCompact ? '22px' : '28px',
     height: isCompact ? '22px' : '28px',
@@ -26,11 +31,10 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
       ? 'inset -2px -2px 4px rgba(139, 69, 19, 0.4), inset 1px 1px 4px rgba(255, 255, 255, 0.7), 0 0 0 1px rgba(180, 164, 120, 0.8), 0 0 0 2px rgba(45, 74, 62, 0.3), 0 0 0 3px rgba(212, 195, 160, 0.2), 0 2px 6px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3)'
       : 'inset -3px -3px 6px rgba(139, 69, 19, 0.4), inset 2px 2px 6px rgba(255, 255, 255, 0.7), 0 0 0 1px rgba(180, 164, 120, 0.8), 0 0 0 2px rgba(45, 74, 62, 0.3), 0 0 0 3px rgba(212, 195, 160, 0.2), 0 3px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)',
     border: '1.5px solid rgba(212, 195, 160, 0.9)',
-    marginRight: '12px',
   };
 
-  const pearlBeforeStyles = {
-    content: '""',
+  // Pearl highlight elements as separate Box components
+  const pearlHighlight1Styles = {
     position: 'absolute',
     top: isCompact ? '3px' : '4px',
     left: isCompact ? '5px' : '6px',
@@ -41,8 +45,7 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
     filter: 'blur(0.5px)',
   };
 
-  const pearlAfterStyles = {
-    content: '""',
+  const pearlHighlight2Styles = {
     position: 'absolute',
     top: '2px',
     left: isCompact ? '3px' : '4px',
@@ -63,14 +66,10 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
     pointerEvents: 'none',
   };
 
-  const swirlStyles = {
+  const swirl1Styles = {
     position: 'absolute',
     border: '1px solid rgba(244, 236, 216, 0.6)',
     borderRadius: '50%',
-  };
-
-  const swirl1Styles = {
-    ...swirlStyles,
     width: isCompact ? '18px' : '24px',
     height: isCompact ? '9px' : '12px',
     top: isCompact ? '4px' : '6px',
@@ -82,7 +81,9 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
   };
 
   const swirl2Styles = {
-    ...swirlStyles,
+    position: 'absolute',
+    border: '1px solid rgba(244, 236, 216, 0.6)',
+    borderRadius: '50%',
     width: isCompact ? '18px' : '24px',
     height: isCompact ? '9px' : '12px',
     top: isCompact ? '4px' : '6px',
@@ -113,14 +114,10 @@ const HumblePearlLogo = ({ size = 'standard', sx = {} }) => {
 
   return (
     <Box sx={logoStyles}>
-      <Box sx={{ position: 'relative' }}>
-        <Box 
-          sx={pearlStyles}
-          style={{
-            '&::before': pearlBeforeStyles,
-            '&::after': pearlAfterStyles,
-          }}
-        />
+      <Box sx={pearlContainerStyles}>
+        <Box sx={pearlStyles} />
+        <Box sx={pearlHighlight1Styles} />
+        <Box sx={pearlHighlight2Styles} />
         <Box sx={swirlsContainerStyles}>
           <Box sx={swirl1Styles} />
           <Box sx={swirl2Styles} />
