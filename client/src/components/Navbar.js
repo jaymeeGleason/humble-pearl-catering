@@ -15,22 +15,6 @@ const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#2D5A5A' }}>
       <Toolbar>
-        <Box
-          component={Link}
-          to="/"
-          sx={{
-            flexGrow: 0,
-            textDecoration: 'none',
-            mr: 4,
-            color: '#E6D7B8',
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            fontFamily: 'serif',
-            letterSpacing: '2px'
-          }}
-        >
-          HUMBLE PEARL
-        </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <Button
