@@ -34,11 +34,12 @@ const Home = () => {
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 800,
-                height: 800,
+                width: 1000,
+                height: 1000,
                 objectFit: 'contain',
                 objectPosition: 'center center',
-                flexShrink: 0
+                flexShrink: 0,
+                border: '5px solid red' // Temporary debug border
               }}
             />
           </Box>
@@ -134,13 +135,14 @@ const Home = () => {
         </Box>
       </Container>
 
-      {/* Footer */}
+      {/* Footer - BIG RED FOOTER FOR DEBUGGING */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
-          color: '#F4EAD5',
-          py: 4,
-          mt: 6
+          background: 'red', // Temporary red background for debugging
+          color: 'white',
+          py: 8,
+          mt: 6,
+          border: '10px solid yellow' // Temporary debug border
         }}
       >
         <Container maxWidth="md">
