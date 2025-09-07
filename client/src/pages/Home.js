@@ -33,8 +33,8 @@ const Home = () => {
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 800,
-                height: 800,
+                width: 300,
+                height: 300,
                 objectFit: 'contain',
                 objectPosition: 'center center'
               }}
