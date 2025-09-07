@@ -23,7 +23,7 @@ const Navbar = () => {
           sx={{
             flexGrow: 0,
             textDecoration: 'none',
-            color: 'inherit',
+            color: '#E6D7B8', // Gentle Gold from palette
             mr: 4,
             fontWeight: 'bold'
           }}
@@ -33,11 +33,16 @@ const Navbar = () => {
 
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <Button
-            color="inherit"
             component={Link}
             to="/"
             startIcon={<HomeIcon />}
-            sx={{ mr: 2 }}
+            sx={{ 
+              mr: 2,
+              color: '#E6D7B8', // Gentle Gold from palette
+              '&:hover': {
+                backgroundColor: 'rgba(230, 215, 184, 0.1)'
+              }
+            }}
           >
             Home
           </Button>
@@ -45,10 +50,15 @@ const Navbar = () => {
 
         <Box>
           <Button 
-            color="inherit" 
             startIcon={<EmailIcon />}
             href="mailto:humblepearl2018@gmail.com"
-            sx={{ textTransform: 'none' }}
+            sx={{ 
+              textTransform: 'none',
+              color: '#E6D7B8', // Gentle Gold from palette
+              '&:hover': {
+                backgroundColor: 'rgba(230, 215, 184, 0.1)'
+              }
+            }}
           >
             Contact Us
           </Button>

@@ -48,8 +48,8 @@ const theme = createTheme({
       dark: '#E6D7B8', // Gentle Gold
     },
     background: {
-      default: '#FDFCF8', // Soft White
-      paper: '#FDFCF8', // Soft White
+      default: '#F4EAD5', // Warm Cream - darker than soft white
+      paper: '#FDFCF8', // Soft White for paper elements
     },
     text: {
       primary: '#1A3D3D', // Deep Forest

@@ -10,6 +10,7 @@ import {
   Email as EmailIcon,
   Language as LanguageIcon
 } from '@mui/icons-material';
+import { grilledPineapples } from '../assets/images';
 
 const Home = () => {
   return (
@@ -57,10 +58,13 @@ const Home = () => {
             </Box>
           </Box>
           
-          <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 'bold', mb: 2 }}>
-            Welcome to Humble Pearl Catering
-          </Typography>
-          <Typography variant="h5" component="p" paragraph sx={{ fontStyle: 'italic', opacity: 0.9 }}>
+          <Typography variant="h3" component="p" paragraph sx={{ 
+            fontStyle: 'italic', 
+            opacity: 0.9,
+            fontWeight: 'medium',
+            mb: 2,
+            color: '#E6D7B8' // Gentle Gold from palette
+          }}>
             Food is love made visible
           </Typography>
         </Container>
@@ -89,6 +93,31 @@ const Home = () => {
 
           <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, fontWeight: 'bold' }}>
             Let Humble Pearl bring warmth, flavor, and joy to your next event. Because when food is made with love, every bite tells a story.
+          </Typography>
+        </Box>
+
+        {/* Featured Food Image */}
+        <Box sx={{ textAlign: 'center', mb: 6 }}>
+          <Box
+            component="img"
+            src={grilledPineapples}
+            alt="Grilled Pineapples - A taste of our delicious offerings"
+            sx={{
+              maxWidth: '100%',
+              height: 'auto',
+              maxHeight: '400px',
+              borderRadius: '12px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+              border: '3px solid rgba(45, 90, 90, 0.1)',
+            }}
+          />
+          <Typography variant="h6" component="p" sx={{ 
+            mt: 2, 
+            color: '#2D5A5A', 
+            fontStyle: 'italic',
+            fontWeight: 'medium'
+          }}>
+            Grilled Pineapples - A taste of our delicious offerings
           </Typography>
         </Box>
 
