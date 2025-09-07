@@ -16,10 +16,6 @@ import { grilledPineapples, humblePearlLogo } from '../assets/images';
 const Home = () => {
   return (
     <Box>
-      {/* DEBUG: This should be visible at the top of the page */}
-      <Box sx={{ background: 'lime', color: 'black', p: 2, textAlign: 'center', fontSize: '2rem', fontWeight: 'bold' }}>
-        🚨 DEBUG: CHANGES ARE WORKING! 🚨
-      </Box>
       {/* Hero Section */}
       <Paper
         sx={{
@@ -38,12 +34,11 @@ const Home = () => {
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 1000,
-                height: 1000,
+                width: 800,
+                height: 800,
                 objectFit: 'contain',
                 objectPosition: 'center center',
-                flexShrink: 0,
-                border: '5px solid red' // Temporary debug border
+                flexShrink: 0
               }}
             />
           </Box>
@@ -139,14 +134,13 @@ const Home = () => {
         </Box>
       </Container>
 
-      {/* Footer - BIG RED FOOTER FOR DEBUGGING */}
+      {/* Footer */}
       <Box
         sx={{
-          background: 'red', // Temporary red background for debugging
-          color: 'white',
-          py: 8,
-          mt: 6,
-          border: '10px solid yellow' // Temporary debug border
+          background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
+          color: '#F4EAD5',
+          py: 4,
+          mt: 6
         }}
       >
         <Container maxWidth="md">
