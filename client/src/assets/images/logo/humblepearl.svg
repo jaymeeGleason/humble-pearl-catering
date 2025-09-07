@@ -1,0 +1,60 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Top arc for HUMBLE -->
+        <path id="top-arc" d="M 70 200 A 130 130 0 0 1 330 200" />
+        <!-- Bottom arc for PEARL -->
+        <path id="bottom-arc" d="M 70 200 A 130 130 0 0 0 330 200" />
+    </defs>
+    
+    <!-- HUMBLE curved along top - positioned much closer -->
+    <text class="logo-text" x="200" y="120" text-anchor="middle" fill="#f2ead7" font-family="Cinzel, serif" font-weight="600" font-size="32" letter-spacing="4">
+        HUMBLE
+    </text>
+    
+    <!-- PEARL curved along bottom - positioned much closer -->
+    <text class="logo-text" x="200" y="290" text-anchor="middle" fill="#f2ead7" font-family="Cinzel, serif" font-weight="600" font-size="32" letter-spacing="4">
+        PEARL
+    </text>
+    
+    <!-- Left decorative flourish - whole thing 2X wider horizontally -->
+    <g fill="none" stroke="#f2ead7" stroke-width="2" stroke-linecap="round">
+        <path d="M 60 200 C 80 170, 120 175, 140 200 C 120 225, 80 230, 60 200" stroke-width="3" />
+        <path d="M 50 185 C 70 160, 110 165, 130 185 C 110 205, 70 210, 50 215" stroke-width="2" />
+        <path d="M 55 215 C 75 240, 115 235, 135 215 C 115 195, 75 200, 55 185" stroke-width="2" />
+        <path d="M 70 200 C 85 190, 105 195, 115 205" stroke-width="1.5" />
+    </g>
+    
+    <!-- Right decorative flourish - whole thing 2X wider horizontally -->
+    <g fill="none" stroke="#f2ead7" stroke-width="2" stroke-linecap="round">
+        <path d="M 340 200 C 320 170, 280 175, 260 200 C 280 225, 320 230, 340 200" stroke-width="3" />
+        <path d="M 350 185 C 330 160, 290 165, 270 185 C 290 205, 330 210, 350 215" stroke-width="2" />
+        <path d="M 345 215 C 325 240, 285 235, 265 215 C 285 195, 325 200, 345 185" stroke-width="2" />
+        <path d="M 330 200 C 315 190, 295 195, 285 205" stroke-width="1.5" />
+    </g>
+    
+    <!-- Pearl with light gold shading in center -->
+    <g>
+        <!-- Main pearl circle - lightest gold base -->
+        <circle fill="#f5f2e6" cx="200" cy="200" r="50" />
+        <!-- Darker edge shading -->
+        <circle fill="#d4c5a0" cx="200" cy="200" r="50" opacity="0.4" />
+        <!-- Ring 1 - outermost light gold -->
+        <circle fill="#f0e5b8" cx="201" cy="201" r="45" opacity="0.5" />
+        <!-- Ring 2 -->
+        <circle fill="#f2e8c4" cx="200" cy="200" r="40" opacity="0.4" />
+        <!-- Ring 3 -->
+        <circle fill="#f4ebd0" cx="199" cy="199" r="35" opacity="0.5" />
+        <!-- Ring 4 -->
+        <circle fill="#f6eedc" cx="198" cy="198" r="30" opacity="0.4" />
+        <!-- Ring 5 -->
+        <circle fill="#f8f1e8" cx="197" cy="197" r="25" opacity="0.5" />
+        <!-- Ring 6 -->
+        <circle fill="#faf4f4" cx="196" cy="196" r="20" opacity="0.4" />
+        <!-- Ring 7 - innermost -->
+        <circle fill="#fcf7f0" cx="195" cy="195" r="15" opacity="0.5" />
+        <!-- White pearl highlight -->
+        <circle fill="#ffffff" cx="185" cy="185" r="8" opacity="0.9" />
+        <!-- Smaller white highlight -->
+        <circle fill="#ffffff" cx="183" cy="183" r="3" opacity="0.7" />
+    </g>
+</svg>

@@ -10,7 +10,7 @@ import {
   Email as EmailIcon,
   Language as LanguageIcon
 } from '@mui/icons-material';
-import { grilledPineapples } from '../assets/images';
+import { grilledPineapples, humblePearlLogo } from '../assets/images';
 
 const Home = () => {
   return (
@@ -44,15 +44,13 @@ const Home = () => {
             >
               <Box
                 component="img"
-                src="/humblepearl.jpg"
+                src={humblePearlLogo}
                 alt="Humble Pearl Logo"
                 sx={{
-                  width: '120%',
-                  height: '120%',
-                  objectFit: 'cover',
-                  objectPosition: 'center center',
-                  transform: 'translateY(10px)',
-                  position: 'absolute'
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  objectPosition: 'center center'
                 }}
               />
             </Box>
