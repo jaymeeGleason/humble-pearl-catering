@@ -11,6 +11,7 @@ import {
   Language as LanguageIcon
 } from '@mui/icons-material';
 import { grilledPineapples, humblePearlLogo } from '../assets/images';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
@@ -54,6 +55,9 @@ const Home = () => {
           </Box>
         </Container>
       </Paper>
+
+      {/* Navbar */}
+      <Navbar />
 
       {/* Main Content */}
       <Container maxWidth="md">
