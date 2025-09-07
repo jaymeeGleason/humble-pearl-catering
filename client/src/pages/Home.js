@@ -27,15 +27,15 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', minHeight: '600px' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', minHeight: '800px' }}>
             {/* Logo centered */}
             <Box
               component="img"
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 800,
-                height: 800,
+                width: 1200,
+                height: 1200,
                 objectFit: 'contain',
                 objectPosition: 'center center',
                 flexShrink: 0
@@ -134,13 +134,14 @@ const Home = () => {
         </Box>
       </Container>
 
-      {/* Footer */}
+      {/* Footer - CONTACT US */}
       <Box
         sx={{
           background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
           color: '#F4EAD5',
-          py: 4,
-          mt: 6
+          py: 8,
+          mt: 8,
+          minHeight: '200px'
         }}
       >
         <Container maxWidth="md">
