@@ -2,7 +2,7 @@
 // This file centralizes all image imports and exports them for use in components
 
 // Logo images
-import humblePearlLogo from './logo/humblepearl.jpg';
+import humblePearlLogo from './logo/humblepearl.svg';
 
 // Food images
 import baconShrimp from './food/bacon_shrimp.JPG';
