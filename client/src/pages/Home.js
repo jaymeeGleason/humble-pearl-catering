@@ -16,6 +16,10 @@ import { grilledPineapples, humblePearlLogo } from '../assets/images';
 const Home = () => {
   return (
     <Box>
+      {/* DEBUG: This should be visible at the top of the page */}
+      <Box sx={{ background: 'lime', color: 'black', p: 2, textAlign: 'center', fontSize: '2rem', fontWeight: 'bold' }}>
+        🚨 DEBUG: CHANGES ARE WORKING! 🚨
+      </Box>
       {/* Hero Section */}
       <Paper
         sx={{
