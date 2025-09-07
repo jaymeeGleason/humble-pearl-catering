@@ -10,7 +10,6 @@ import {
   Home as HomeIcon,
   Email as EmailIcon
 } from '@mui/icons-material';
-import { humblePearlLogo } from '../assets/images';
 
 const Navbar = () => {
   return (
@@ -23,18 +22,14 @@ const Navbar = () => {
             flexGrow: 0,
             textDecoration: 'none',
             mr: 4,
+            color: '#E6D7B8',
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+            fontFamily: 'serif',
+            letterSpacing: '2px'
           }}
         >
-          <Box
-            component="img"
-            src={humblePearlLogo}
-            alt="Humble Pearl Logo"
-            sx={{
-              height: 40,
-              width: 'auto',
-              objectFit: 'contain'
-            }}
-          />
+          HUMBLE PEARL
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>

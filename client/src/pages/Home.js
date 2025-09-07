@@ -26,8 +26,8 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          {/* Logo - Large 800px design for maximum impact */}
-          <Box sx={{ mb: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            {/* Logo on the left */}
             <Box
               component="img"
               src={humblePearlLogo}
@@ -36,20 +36,22 @@ const Home = () => {
                 width: 150,
                 height: 150,
                 objectFit: 'contain',
-                objectPosition: 'center center'
+                objectPosition: 'center center',
+                flexShrink: 0
               }}
             />
+            
+            {/* Tagline on the right */}
+            <Typography variant="h6" component="p" sx={{ 
+              fontStyle: 'italic', 
+              opacity: 0.9,
+              fontWeight: 'medium',
+              color: '#E6D7B8', // Gentle Gold from palette
+              flex: 1
+            }}>
+              Food is love made visible
+            </Typography>
           </Box>
-          
-          <Typography variant="h6" component="p" paragraph sx={{ 
-            fontStyle: 'italic', 
-            opacity: 0.9,
-            fontWeight: 'medium',
-            mb: 2,
-            color: '#E6D7B8' // Gentle Gold from palette
-          }}>
-            Food is love made visible
-          </Typography>
         </Container>
       </Paper>
 
