@@ -20,14 +20,14 @@ const Home = () => {
         sx={{
           background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
           color: '#F4EAD5',
-          py: 8,
-          mb: 6,
+          py: 3,
+          mb: 4,
           textAlign: 'center'
         }}
       >
         <Container maxWidth="md">
           {/* Logo - Large 800px design for maximum impact */}
-          <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box sx={{ mb: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
               component="img"
               src={humblePearlLogo}
