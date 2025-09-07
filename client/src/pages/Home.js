@@ -4,14 +4,14 @@ import {
   Typography,
   Box,
   Paper,
-  Divider
+  Divider,
+  Button
 } from '@mui/material';
 import {
   Email as EmailIcon,
   Language as LanguageIcon
 } from '@mui/icons-material';
 import { grilledPineapples, humblePearlLogo } from '../assets/images';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
@@ -42,22 +42,41 @@ const Home = () => {
               }}
             />
             
-            {/* Tagline on the right */}
-            <Typography variant="h6" component="p" sx={{ 
-              fontStyle: 'italic', 
-              opacity: 0.9,
-              fontWeight: 'medium',
-              color: '#E6D7B8', // Gentle Gold from palette
-              flex: 1
-            }}>
-              Food is love made visible
-            </Typography>
+            {/* Tagline and Contact on the right */}
+            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+              <Typography variant="h6" component="p" sx={{ 
+                fontStyle: 'italic', 
+                opacity: 0.9,
+                fontWeight: 'medium',
+                color: '#E6D7B8', // Gentle Gold from palette
+                textAlign: 'center'
+              }}>
+                Food is love made visible
+              </Typography>
+              
+              <Button
+                startIcon={<EmailIcon />}
+                href="mailto:humblepearl2018@gmail.com"
+                sx={{
+                  textTransform: 'none',
+                  color: '#E6D7B8',
+                  borderColor: '#E6D7B8',
+                  border: '2px solid',
+                  px: 3,
+                  py: 1,
+                  '&:hover': {
+                    backgroundColor: 'rgba(230, 215, 184, 0.1)',
+                    borderColor: '#F4EAD5'
+                  }
+                }}
+                variant="outlined"
+              >
+                Contact Us
+              </Button>
+            </Box>
           </Box>
         </Container>
       </Paper>
-
-      {/* Navbar */}
-      <Navbar />
 
       {/* Main Content */}
       <Container maxWidth="md">
