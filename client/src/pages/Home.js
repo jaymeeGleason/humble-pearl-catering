@@ -98,9 +98,6 @@ const Home = () => {
 
         {/* Featured Food Image */}
         <Box sx={{ textAlign: 'center', mb: 6 }}>
-          <Typography variant="body2" sx={{ mb: 2, color: '#666' }}>
-            Debug: Image src = {grilledPineapples ? 'Loaded' : 'Not loaded'}
-          </Typography>
           <Box
             component="img"
             src={grilledPineapples}
@@ -113,11 +110,6 @@ const Home = () => {
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
               border: '3px solid rgba(45, 90, 90, 0.1)',
             }}
-            onError={(e) => {
-              console.error('Image failed to load:', e);
-              e.target.style.display = 'none';
-            }}
-            onLoad={() => console.log('Image loaded successfully')}
           />
           <Typography variant="h6" component="p" sx={{ 
             mt: 2, 
