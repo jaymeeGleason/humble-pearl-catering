@@ -10,7 +10,7 @@ import {
   Email as EmailIcon,
   Language as LanguageIcon
 } from '@mui/icons-material';
-// import { grilledPineapples } from '../assets/images'; // Temporarily disabled for mobile testing
+import { grilledPineapples } from '../assets/images';
 
 const Home = () => {
   return (
@@ -96,8 +96,8 @@ const Home = () => {
           </Typography>
         </Box>
 
-        {/* Featured Food Image - Temporarily commented out for mobile testing */}
-        {/* <Box sx={{ textAlign: 'center', mb: 6 }}>
+        {/* Featured Food Image */}
+        <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Box
             component="img"
             src={grilledPineapples}
@@ -119,7 +119,7 @@ const Home = () => {
           }}>
             Grilled Pineapples - A taste of our delicious offerings
           </Typography>
-        </Box> */}
+        </Box>
 
         <Divider sx={{ my: 6, borderColor: '#E6D7B8' }} />
 
