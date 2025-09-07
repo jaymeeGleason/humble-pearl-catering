@@ -27,15 +27,15 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             {/* Logo on the left */}
             <Box
               component="img"
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 150,
-                height: 150,
+                width: 250,
+                height: 250,
                 objectFit: 'contain',
                 objectPosition: 'center center',
                 flexShrink: 0
