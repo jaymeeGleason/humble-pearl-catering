@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Box
 } from '@mui/material';
@@ -11,25 +10,23 @@ import {
   Home as HomeIcon,
   Email as EmailIcon
 } from '@mui/icons-material';
+import HumblePearlLogo from './HumblePearlLogo';
 
 const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#2D5A5A' }}>
       <Toolbar>
-        <Typography
-          variant="h5"
+        <Box
           component={Link}
           to="/"
           sx={{
             flexGrow: 0,
             textDecoration: 'none',
-            color: '#E6D7B8', // Gentle Gold from palette
             mr: 4,
-            fontWeight: 'bold'
           }}
         >
-          Humble Pearl Catering
-        </Typography>
+          <HumblePearlLogo size="standard" />
+        </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <Button
