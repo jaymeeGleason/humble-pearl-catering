@@ -26,7 +26,7 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          {/* Logo - Clean design without circular border */}
+          {/* Logo - Large 800px design for maximum impact */}
           <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
               component="img"
