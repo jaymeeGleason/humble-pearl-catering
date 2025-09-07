@@ -26,7 +26,7 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          {/* Logo */}
+          {/* Logo - Clean design without circular border */}
           <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
               component="img"
