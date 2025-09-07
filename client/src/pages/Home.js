@@ -29,31 +29,16 @@ const Home = () => {
           {/* Logo */}
           <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box
+              component="img"
+              src={humblePearlLogo}
+              alt="Humble Pearl Logo"
               sx={{
                 width: 200,
                 height: 200,
-                borderRadius: '50%',
-                border: '3px solid rgba(255, 255, 255, 0.3)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative'
+                objectFit: 'contain',
+                objectPosition: 'center center'
               }}
-            >
-              <Box
-                component="img"
-                src={humblePearlLogo}
-                alt="Humble Pearl Logo"
-                sx={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  objectPosition: 'center center'
-                }}
-              />
-            </Box>
+            />
           </Box>
           
           <Typography variant="h3" component="p" paragraph sx={{ 
