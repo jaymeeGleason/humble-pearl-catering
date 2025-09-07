@@ -33,15 +33,15 @@ const Home = () => {
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 200,
-                height: 200,
+                width: 800,
+                height: 800,
                 objectFit: 'contain',
                 objectPosition: 'center center'
               }}
             />
           </Box>
           
-          <Typography variant="h3" component="p" paragraph sx={{ 
+          <Typography variant="h6" component="p" paragraph sx={{ 
             fontStyle: 'italic', 
             opacity: 0.9,
             fontWeight: 'medium',
