@@ -27,7 +27,7 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', minHeight: '500px' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', minHeight: '600px' }}>
             {/* Logo centered */}
             <Box
               component="img"
