@@ -27,56 +27,33 @@ const Home = () => {
         }}
       >
         <Container maxWidth="md">
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', minHeight: '300px' }}>
-            {/* Logo on the left */}
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', minHeight: '500px' }}>
+            {/* Logo centered */}
             <Box
               component="img"
               src={humblePearlLogo}
               alt="Humble Pearl Logo"
               sx={{
-                width: 500,
-                height: 500,
+                width: 800,
+                height: 800,
                 objectFit: 'contain',
                 objectPosition: 'center center',
                 flexShrink: 0
               }}
             />
-            
-            {/* Tagline in the center */}
-            <Typography variant="h6" component="p" sx={{ 
-              fontStyle: 'italic', 
-              opacity: 0.9,
-              fontWeight: 'medium',
-              color: '#E6D7B8', // Gentle Gold from palette
-              textAlign: 'center',
-              flex: 1,
-              mx: 4
-            }}>
-              Food is love made visible
-            </Typography>
-            
-            {/* Contact button all the way to the right */}
-            <Button
-              startIcon={<EmailIcon />}
-              href="mailto:humblepearl2018@gmail.com"
-              sx={{
-                textTransform: 'none',
-                color: '#E6D7B8',
-                borderColor: '#E6D7B8',
-                border: '2px solid',
-                px: 3,
-                py: 1,
-                flexShrink: 0,
-                '&:hover': {
-                  backgroundColor: 'rgba(230, 215, 184, 0.1)',
-                  borderColor: '#F4EAD5'
-                }
-              }}
-              variant="outlined"
-            >
-              Contact Us
-            </Button>
           </Box>
+          
+          {/* Tagline below logo */}
+          <Typography variant="h6" component="p" sx={{ 
+            fontStyle: 'italic', 
+            opacity: 0.9,
+            fontWeight: 'medium',
+            color: '#E6D7B8', // Gentle Gold from palette
+            textAlign: 'center',
+            mb: 4
+          }}>
+            Food is love made visible
+          </Typography>
         </Container>
       </Paper>
 
@@ -156,6 +133,46 @@ const Home = () => {
           </Box>
         </Box>
       </Container>
+
+      {/* Footer */}
+      <Box
+        sx={{
+          background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
+          color: '#F4EAD5',
+          py: 4,
+          mt: 6
+        }}
+      >
+        <Container maxWidth="md">
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 4 }}>
+            <Typography variant="h6" sx={{ color: '#E6D7B8', fontWeight: 'bold' }}>
+              Ready to work with us?
+            </Typography>
+            <Button
+              startIcon={<EmailIcon />}
+              href="mailto:humblepearl2018@gmail.com"
+              sx={{
+                textTransform: 'none',
+                color: '#E6D7B8',
+                borderColor: '#E6D7B8',
+                border: '2px solid',
+                px: 4,
+                py: 1.5,
+                fontSize: '1.1rem',
+                '&:hover': {
+                  backgroundColor: 'rgba(230, 215, 184, 0.1)',
+                  borderColor: '#F4EAD5',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                }
+              }}
+              variant="outlined"
+            >
+              Contact Us
+            </Button>
+          </Box>
+        </Container>
+      </Box>
     </Box>
   );
 };
