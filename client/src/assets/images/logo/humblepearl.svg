@@ -7,12 +7,12 @@
     </defs>
     
     <!-- HUMBLE curved along top - positioned much closer -->
-    <text class="logo-text" x="200" y="120" text-anchor="middle" fill="#f2ead7" font-family="Cinzel, serif" font-weight="600" font-size="32" letter-spacing="4">
+    <text x="200" y="120" text-anchor="middle" fill="#f2ead7" font-family="serif" font-weight="bold" font-size="32" letter-spacing="4">
         HUMBLE
     </text>
     
     <!-- PEARL curved along bottom - positioned much closer -->
-    <text class="logo-text" x="200" y="290" text-anchor="middle" fill="#f2ead7" font-family="Cinzel, serif" font-weight="600" font-size="32" letter-spacing="4">
+    <text x="200" y="290" text-anchor="middle" fill="#f2ead7" font-family="serif" font-weight="bold" font-size="32" letter-spacing="4">
         PEARL
     </text>
     
