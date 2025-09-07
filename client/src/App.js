@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Box, Container, ThemeProvider } from '@mui/material';
+import { Box, ThemeProvider } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -13,11 +13,11 @@ function App() {
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
         
-        <Container component="main" sx={{ flexGrow: 1, py: 4 }}>
+        <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-        </Container>
+        </Box>
       </Box>
     </ThemeProvider>
   );
