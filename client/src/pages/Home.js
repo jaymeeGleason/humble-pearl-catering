@@ -18,7 +18,7 @@ const Home = () => {
       {/* Hero Section */}
       <Paper
         sx={{
-          background: 'linear-gradient(135deg, #2D5A5A 0%, #3D6A6A 50%, #1A3D3D 100%)',
+          background: 'linear-gradient(135deg, #1A3D3D 0%, #2D4A4A 50%, #0F2A2A 100%)',
           color: '#F4EAD5',
           py: 8,
           mb: 6,
