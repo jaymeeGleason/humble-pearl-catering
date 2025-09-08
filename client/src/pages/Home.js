@@ -91,12 +91,15 @@ const Home = () => {
             alt="Carrot and Potato Dish - A taste of our delicious offerings"
             sx={{
               maxWidth: '100%',
-              height: 'auto',
               maxHeight: '400px',
               borderRadius: '12px',
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
               border: '3px solid rgba(45, 90, 90, 0.1)',
               transform: 'rotate(90deg)',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              width: '300px',
+              height: '400px',
             }}
           />
         </Box>
