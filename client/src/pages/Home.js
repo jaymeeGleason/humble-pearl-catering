@@ -96,16 +96,9 @@ const Home = () => {
               borderRadius: '12px',
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
               border: '3px solid rgba(45, 90, 90, 0.1)',
+              transform: 'rotate(90deg)',
             }}
           />
-          <Typography variant="h6" component="p" sx={{ 
-            mt: 2, 
-            color: '#2D5A5A', 
-            fontStyle: 'italic',
-            fontWeight: 'medium'
-          }}>
-            Carrot and Potato Dish - A taste of our delicious offerings
-          </Typography>
         </Box>
 
         <Divider sx={{ my: 6, borderColor: '#E6D7B8' }} />
