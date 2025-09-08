@@ -38,22 +38,22 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#2D5A5A', // Deep Teal
-      light: '#3D6A6A', // Rich Teal
-      dark: '#1A3D3D', // Deep Forest
+      main: '#4A90E2', // Modern Blue
+      light: '#6BA3E8', // Light Blue
+      dark: '#357ABD', // Dark Blue
     },
     secondary: {
-      main: '#F4EAD5', // Warm Cream
-      light: '#FDFCF8', // Soft White
-      dark: '#E6D7B8', // Gentle Gold
+      main: '#2C2C2C', // Dark Gray
+      light: '#F8F8F8', // Light Gray
+      dark: '#1A1A1A', // Very Dark Gray
     },
     background: {
-      default: '#F4EAD5', // Warm Cream - darker than soft white
-      paper: '#FDFCF8', // Soft White for paper elements
+      default: '#FFFFFF', // Pure White
+      paper: '#FFFFFF', // Pure White for paper elements
     },
     text: {
-      primary: '#1A3D3D', // Deep Forest
-      secondary: '#5A7A7A', // Muted Teal
+      primary: '#2C2C2C', // Dark Gray
+      secondary: '#666666', // Medium Gray
     },
     custom: {
       warmCream: '#F4EAD5',
