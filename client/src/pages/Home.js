@@ -11,7 +11,7 @@ import {
   Email as EmailIcon,
   Language as LanguageIcon
 } from '@mui/icons-material';
-import { grilledPineapples, humblePearlLogo } from '../assets/images';
+import { carrotPotato, humblePearlLogo } from '../assets/images';
 
 const Home = () => {
   return (
@@ -87,8 +87,8 @@ const Home = () => {
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Box
             component="img"
-            src={grilledPineapples}
-            alt="Grilled Pineapples - A taste of our delicious offerings"
+            src={carrotPotato}
+            alt="Carrot and Potato Dish - A taste of our delicious offerings"
             sx={{
               maxWidth: '100%',
               height: 'auto',
@@ -104,7 +104,7 @@ const Home = () => {
             fontStyle: 'italic',
             fontWeight: 'medium'
           }}>
-            Grilled Pineapples - A taste of our delicious offerings
+            Carrot and Potato Dish - A taste of our delicious offerings
           </Typography>
         </Box>
 
