@@ -18,6 +18,9 @@ import tacos from './food/tacos.jpg';
 // import event1 from './events/event1.jpg';
 // import event2 from './events/event2.jpg';
 
+// Team images
+import joeChristina from './other/joe&Christina.jpg';
+
 // Export all images as an object for easy access
 export const images = {
   logo: {
@@ -38,12 +41,16 @@ export const images = {
     // event1,
     // event2,
   },
+  team: {
+    joeChristina,
+  },
 };
 
 // Export individual images for direct import
 export { 
-  humblePearlLogo, 
-  baconShrimp, carrotCupcakes, carrotPotato, chickenRiceBowl, crabBoil, flowerCupcakes, grilledPineapples, tacos 
+  humblePearlLogo,
+  baconShrimp, carrotCupcakes, carrotPotato, chickenRiceBowl, crabBoil, flowerCupcakes, grilledPineapples, tacos,
+  joeChristina
 };
 
 // Helper function to get image by path
