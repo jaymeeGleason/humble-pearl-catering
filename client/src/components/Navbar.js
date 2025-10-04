@@ -9,9 +9,7 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText,
-  useMediaQuery,
-  useTheme
+  ListItemText
 } from '@mui/material';
 import {
   Search as SearchIcon,
@@ -22,8 +20,6 @@ import { humblePearlLogo } from '../assets/images';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

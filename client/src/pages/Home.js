@@ -14,13 +14,8 @@ import {
   Language as LanguageIcon
 } from '@mui/icons-material';
 import { 
-  carrotPotato, 
-  humblePearlLogo, 
   joeChristina,
   baconShrimp,
-  flowerCupcakes,
-  grilledPineapples,
-  chickenRiceBowl,
   fridayPlate2,
   wrappedSweets,
   tacoBar
