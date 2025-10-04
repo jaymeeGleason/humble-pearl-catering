@@ -4,6 +4,9 @@ import { Box, ThemeProvider } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Events from './pages/Events';
+import Sweets from './pages/Sweets';
+import FridayPlates from './pages/FridayPlates';
 import theme from './theme';
 
 function App() {
@@ -14,6 +17,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/sweets" element={<Sweets />} />
+          <Route path="/friday-plates" element={<FridayPlates />} />
         </Routes>
       </Box>
     </ThemeProvider>

@@ -8,6 +8,7 @@ import {
   Card,
   CardContent
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import {
   Email as EmailIcon,
   Language as LanguageIcon
@@ -19,7 +20,10 @@ import {
   baconShrimp,
   flowerCupcakes,
   grilledPineapples,
-  chickenRiceBowl
+  chickenRiceBowl,
+  fridayPlate2,
+  wrappedSweets,
+  tacoBar
 } from '../assets/images';
 
 const Home = () => {
@@ -29,8 +33,8 @@ const Home = () => {
       <Box
         sx={{
           position: 'relative',
-          height: '70vh',
-          minHeight: '500px',
+          height: { xs: '60vh', sm: '70vh' },
+          minHeight: { xs: '400px', sm: '500px' },
           backgroundImage: `url(${baconShrimp})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -45,43 +49,35 @@ const Home = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             zIndex: 1
           }
         }}
       >
-        {/* Logo in upper left corner */}
-        <Box
-          component="img"
-          src={humblePearlLogo}
-          alt="Humble Pearl Logo"
-          sx={{
-            position: 'absolute',
-            top: 20,
-            left: 20,
-            width: 240,
-            height: 240,
-            objectFit: 'contain',
-            zIndex: 3,
-            filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))'
-          }}
-        />
+        {/* Hero Text - Mobile optimized */}
         <Box sx={{ 
           position: 'relative', 
           zIndex: 2, 
           textAlign: 'center',
           color: 'white',
-          maxWidth: '800px',
-          px: 3
+          maxWidth: { xs: '90%', sm: '80%', md: '800px' },
+          px: { xs: 2, sm: 3 }
         }}>
           <Typography 
             variant="h2" 
             component="h1"
             sx={{ 
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              fontSize: { 
+                xs: '1.5rem', 
+                sm: '2rem', 
+                md: '2.5rem', 
+                lg: '3.5rem' 
+              },
               fontWeight: 'bold',
               fontFamily: '"Playfair Display", serif',
-              textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
+              textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+              lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
+              mb: { xs: 1, sm: 2 }
             }}
           >
             Made from scratch using only the freshest ingredients
@@ -90,9 +86,9 @@ const Home = () => {
       </Box>
 
       {/* Services Section */}
-      <Box sx={{ py: 8, backgroundColor: 'white' }}>
+      <Box sx={{ py: { xs: 4, sm: 6, md: 8 }, backgroundColor: 'white' }}>
         <Container maxWidth="lg">
-          <Grid container spacing={6}>
+          <Grid container spacing={{ xs: 3, sm: 4, md: 6 }}>
             {/* Menus Section */}
             <Grid item xs={12} md={4}>
               <Card sx={{ 
@@ -106,18 +102,18 @@ const Home = () => {
                   transition: 'all 0.3s ease'
                 }
               }}>
-                <CardContent sx={{ p: 4 }}>
+                <CardContent sx={{ p: { xs: 3, sm: 4 } }}>
                   <Box
                     component="img"
-                    src={flowerCupcakes}
-                    alt="Our Menu - Delicious Filipino-American Cuisine"
+                    src={tacoBar}
+                    alt="Events - Memorable Catering Experiences"
                     sx={{
-                      width: 200,
-                      height: 200,
+                      width: { xs: 150, sm: 180, md: 200 },
+                      height: { xs: 150, sm: 180, md: 200 },
                       borderRadius: '50%',
                       objectFit: 'cover',
                       objectPosition: 'center',
-                      mb: 3,
+                      mb: { xs: 2, sm: 3 },
                       border: '4px solid #f8f8f8'
                     }}
                   />
@@ -127,109 +123,35 @@ const Home = () => {
                     sx={{ 
                       fontWeight: 'bold',
                       color: '#2C2C2C',
-                      mb: 2,
-                      fontSize: '2rem'
+                      mb: { xs: 1, sm: 2 },
+                      fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
                     }}
                   >
-                    Menus
+                    Events
                   </Typography>
                   <Typography 
                     variant="body1" 
                     paragraph
                     sx={{ 
-                      fontSize: '1rem',
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
                       lineHeight: 1.6,
                       color: '#666',
-                      mb: 3
+                      mb: { xs: 2, sm: 3 }
                     }}
                   >
-                    Humble Pearl Catering provides a wide selection of food items for Breakfast, Lunch, Dinner, Dessert and more! Our menu options stop at your imagination.
+                    From intimate gatherings to grand celebrations, we create memorable experiences with our exceptional catering services for all types of events.
                   </Typography>
                   <Button
+                    component={Link}
+                    to="/events"
                     variant="contained"
                     sx={{
                       backgroundColor: '#4A90E2',
                       color: 'white',
                       textTransform: 'none',
-                      px: 4,
-                      py: 1.5,
-                      fontSize: '1rem',
-                      fontWeight: 600,
-                      borderRadius: '25px',
-                      '&:hover': {
-                        backgroundColor: '#357ABD',
-                        transform: 'translateY(-2px)',
-                        boxShadow: '0 4px 12px rgba(74, 144, 226, 0.3)'
-                      }
-                    }}
-                  >
-                    VIEW MENUS
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Event Catering Section */}
-            <Grid item xs={12} md={4}>
-              <Card sx={{ 
-                textAlign: 'center', 
-                height: '100%',
-                boxShadow: 'none',
-                border: '1px solid #f0f0f0',
-                '&:hover': {
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                  transform: 'translateY(-4px)',
-                  transition: 'all 0.3s ease'
-                }
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box
-                    component="img"
-                    src={chickenRiceBowl}
-                    alt="Event Catering - Professional Service"
-                    sx={{
-                      width: 200,
-                      height: 200,
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                      mb: 3,
-                      border: '4px solid #f8f8f8'
-                    }}
-                  />
-                  <Typography 
-                    variant="h4" 
-                    component="h2"
-                    sx={{ 
-                      fontWeight: 'bold',
-                      color: '#2C2C2C',
-                      mb: 2,
-                      fontSize: '2rem'
-                    }}
-                  >
-                    Event Catering
-                  </Typography>
-                  <Typography 
-                    variant="body1" 
-                    paragraph
-                    sx={{ 
-                      fontSize: '1rem',
-                      lineHeight: 1.6,
-                      color: '#666',
-                      mb: 3
-                    }}
-                  >
-                    Corporate Events, Weddings, Funerals, Fundraisers, Special Events - Humble Pearl Catering is here to assist you with your catering needs.
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      backgroundColor: '#4A90E2',
-                      color: 'white',
-                      textTransform: 'none',
-                      px: 4,
-                      py: 1.5,
-                      fontSize: '1rem',
+                      px: { xs: 3, sm: 4 },
+                      py: { xs: 1, sm: 1.5 },
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
                       fontWeight: 600,
                       borderRadius: '25px',
                       '&:hover': {
@@ -245,7 +167,7 @@ const Home = () => {
               </Card>
             </Grid>
 
-            {/* Services Section */}
+            {/* Sweets Section */}
             <Grid item xs={12} md={4}>
               <Card sx={{ 
                 textAlign: 'center', 
@@ -258,18 +180,18 @@ const Home = () => {
                   transition: 'all 0.3s ease'
                 }
               }}>
-                <CardContent sx={{ p: 4 }}>
+                <CardContent sx={{ p: { xs: 3, sm: 4 } }}>
                   <Box
                     component="img"
-                    src={carrotPotato}
-                    alt="Our Services - Complete Catering Solutions"
+                    src={wrappedSweets}
+                    alt="Sweets - Homemade Desserts and Treats"
                     sx={{
-                      width: 200,
-                      height: 200,
+                      width: { xs: 150, sm: 180, md: 200 },
+                      height: { xs: 150, sm: 180, md: 200 },
                       borderRadius: '50%',
                       objectFit: 'cover',
                       objectPosition: 'center',
-                      mb: 3,
+                      mb: { xs: 2, sm: 3 },
                       border: '4px solid #f8f8f8'
                     }}
                   />
@@ -279,33 +201,113 @@ const Home = () => {
                     sx={{ 
                       fontWeight: 'bold',
                       color: '#2C2C2C',
-                      mb: 2,
-                      fontSize: '2rem'
+                      mb: { xs: 1, sm: 2 },
+                      fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
                     }}
                   >
-                    Services
+                    Sweets
                   </Typography>
                   <Typography 
                     variant="body1" 
                     paragraph
                     sx={{ 
-                      fontSize: '1rem',
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
                       lineHeight: 1.6,
                       color: '#666',
-                      mb: 3
+                      mb: { xs: 2, sm: 3 }
                     }}
                   >
-                    Let Humble Pearl Catering help supply you with the proper equipment and service you need to make your event a huge success!
+                    Indulge in our delectable selection of homemade desserts, pastries, and sweet treats crafted with love and the finest ingredients.
                   </Typography>
                   <Button
+                    component={Link}
+                    to="/sweets"
                     variant="contained"
                     sx={{
                       backgroundColor: '#4A90E2',
                       color: 'white',
                       textTransform: 'none',
-                      px: 4,
-                      py: 1.5,
-                      fontSize: '1rem',
+                      px: { xs: 3, sm: 4 },
+                      py: { xs: 1, sm: 1.5 },
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
+                      fontWeight: 600,
+                      borderRadius: '25px',
+                      '&:hover': {
+                        backgroundColor: '#357ABD',
+                        transform: 'translateY(-2px)',
+                        boxShadow: '0 4px 12px rgba(74, 144, 226, 0.3)'
+                      }
+                    }}
+                  >
+                    LEARN MORE
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            {/* Friday Plates Section */}
+            <Grid item xs={12} md={4}>
+              <Card sx={{ 
+                textAlign: 'center', 
+                height: '100%',
+                boxShadow: 'none',
+                border: '1px solid #f0f0f0',
+                '&:hover': {
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                  transform: 'translateY(-4px)',
+                  transition: 'all 0.3s ease'
+                }
+              }}>
+                <CardContent sx={{ p: { xs: 3, sm: 4 } }}>
+                  <Box
+                    component="img"
+                    src={fridayPlate2}
+                    alt="Friday Plates - Weekly Special Dishes"
+                    sx={{
+                      width: { xs: 150, sm: 180, md: 200 },
+                      height: { xs: 150, sm: 180, md: 200 },
+                      borderRadius: '50%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      mb: { xs: 2, sm: 3 },
+                      border: '4px solid #f8f8f8'
+                    }}
+                  />
+                  <Typography 
+                    variant="h4" 
+                    component="h2"
+                    sx={{ 
+                      fontWeight: 'bold',
+                      color: '#2C2C2C',
+                      mb: { xs: 1, sm: 2 },
+                      fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
+                    }}
+                  >
+                    Friday Plates
+                  </Typography>
+                  <Typography 
+                    variant="body1" 
+                    paragraph
+                    sx={{ 
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
+                      lineHeight: 1.6,
+                      color: '#666',
+                      mb: { xs: 2, sm: 3 }
+                    }}
+                  >
+                    Join us every Friday for our special weekly plates featuring fresh, seasonal ingredients and our signature Filipino-American comfort food.
+                  </Typography>
+                  <Button
+                    component={Link}
+                    to="/friday-plates"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: '#4A90E2',
+                      color: 'white',
+                      textTransform: 'none',
+                      px: { xs: 3, sm: 4 },
+                      py: { xs: 1, sm: 1.5 },
+                      fontSize: { xs: '0.9rem', sm: '1rem' },
                       fontWeight: 600,
                       borderRadius: '25px',
                       '&:hover': {
@@ -325,10 +327,15 @@ const Home = () => {
       </Box>
 
       {/* About Section */}
-      <Box sx={{ py: 8, backgroundColor: '#F8F8F8' }}>
+      <Box sx={{ py: { xs: 4, sm: 6, md: 8 }, backgroundColor: '#F8F8F8' }}>
         <Container maxWidth="lg">
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 6, flexDirection: { xs: 'column', md: 'row' } }}>
-            <Box sx={{ flex: 1 }}>
+          <Box sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: { xs: 4, sm: 5, md: 6 }, 
+            flexDirection: { xs: 'column', md: 'row' } 
+          }}>
+            <Box sx={{ flex: 1, order: { xs: 2, md: 1 } }}>
               <Typography 
                 variant="h3" 
                 component="h2" 
@@ -336,19 +343,36 @@ const Home = () => {
                 sx={{ 
                   color: '#2C2C2C', 
                   fontWeight: 'bold',
-                  mb: 4,
-                  fontSize: { xs: '2rem', md: '2.5rem' }
+                  mb: { xs: 3, sm: 4 },
+                  fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+                  textAlign: { xs: 'center', md: 'left' }
                 }}
               >
                 Our Story
               </Typography>
-              <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#666' }}>
+              <Typography variant="body1" paragraph sx={{ 
+                fontSize: { xs: '1rem', sm: '1.1rem' }, 
+                lineHeight: 1.8, 
+                color: '#666',
+                textAlign: { xs: 'center', md: 'left' }
+              }}>
                 At Humble Pearl, we believe that food is love made visible. Founded on the simple joy of bringing people together through exceptional cuisine, we specialize in comfort food with a Filipino twist that warms both the heart and soul.
               </Typography>
-              <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#666' }}>
+              <Typography variant="body1" paragraph sx={{ 
+                fontSize: { xs: '1rem', sm: '1.1rem' }, 
+                lineHeight: 1.8, 
+                color: '#666',
+                textAlign: { xs: 'center', md: 'left' }
+              }}>
                 Our passion lies in creating memorable dining experiences that celebrate life's precious moments. Whether you're hosting an intimate gathering or a grand celebration, we craft each dish with the same care and attention we'd give to our own family table.
               </Typography>
-              <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#666', fontWeight: 'bold' }}>
+              <Typography variant="body1" paragraph sx={{ 
+                fontSize: { xs: '1rem', sm: '1.1rem' }, 
+                lineHeight: 1.8, 
+                color: '#666', 
+                fontWeight: 'bold',
+                textAlign: { xs: 'center', md: 'left' }
+              }}>
                 Let Humble Pearl bring warmth, flavor, and joy to your next event. Because when food is made with love, every bite tells a story.
               </Typography>
             </Box>
@@ -357,13 +381,14 @@ const Home = () => {
               src={joeChristina}
               alt="Joe & Christina - Founders of Humble Pearl Catering"
               sx={{
-                width: { xs: 300, md: 400 },
-                height: { xs: 300, md: 400 },
+                width: { xs: 250, sm: 300, md: 400 },
+                height: { xs: 250, sm: 300, md: 400 },
                 objectFit: 'cover',
                 objectPosition: 'center 30%',
                 borderRadius: '16px',
                 boxShadow: '0 12px 40px rgba(0, 0, 0, 0.15)',
-                flexShrink: 0
+                flexShrink: 0,
+                order: { xs: 1, md: 2 }
               }}
             />
           </Box>
@@ -371,9 +396,9 @@ const Home = () => {
       </Box>
 
       {/* Contact Section */}
-      <Box sx={{ py: 8, backgroundColor: 'white' }}>
+      <Box sx={{ py: { xs: 4, sm: 6, md: 8 }, backgroundColor: 'white' }}>
         <Container maxWidth="md">
-          <Box sx={{ textAlign: 'center', mb: 6 }}>
+          <Box sx={{ textAlign: 'center', mb: { xs: 4, sm: 5, md: 6 } }}>
             <Typography 
               variant="h3" 
               component="h2" 
@@ -381,7 +406,7 @@ const Home = () => {
               sx={{ 
                 color: '#2C2C2C', 
                 fontWeight: 'bold',
-                fontSize: { xs: '2rem', md: '2.5rem' }
+                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
               }}
             >
               Contact Us
@@ -390,7 +415,7 @@ const Home = () => {
               variant="h6" 
               sx={{ 
                 color: '#666',
-                fontSize: '1.2rem',
+                fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
                 fontWeight: 400
               }}
             >
@@ -402,20 +427,26 @@ const Home = () => {
             display: 'flex', 
             flexDirection: 'column', 
             alignItems: 'center', 
-            gap: 4,
-            mb: 6
+            gap: { xs: 3, sm: 4 },
+            mb: { xs: 4, sm: 5, md: 6 }
           }}>
             <Box sx={{ 
               display: 'flex', 
               alignItems: 'center', 
-              gap: 2,
-              p: 3,
+              gap: { xs: 1.5, sm: 2 },
+              p: { xs: 2, sm: 3 },
               backgroundColor: '#F8F8F8',
               borderRadius: '12px',
-              minWidth: '300px'
+              width: { xs: '100%', sm: 'auto' },
+              minWidth: { xs: 'auto', sm: '300px' },
+              maxWidth: { xs: '100%', sm: '400px' }
             }}>
-              <EmailIcon sx={{ color: '#4A90E2', fontSize: '2rem' }} />
-              <Typography variant="h6" component="span" sx={{ color: '#2C2C2C', fontSize: '1.1rem' }}>
+              <EmailIcon sx={{ color: '#4A90E2', fontSize: { xs: '1.5rem', sm: '2rem' } }} />
+              <Typography variant="h6" component="span" sx={{ 
+                color: '#2C2C2C', 
+                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                wordBreak: 'break-all'
+              }}>
                 humblepearl2018@gmail.com
               </Typography>
             </Box>
@@ -423,14 +454,19 @@ const Home = () => {
             <Box sx={{ 
               display: 'flex', 
               alignItems: 'center', 
-              gap: 2,
-              p: 3,
+              gap: { xs: 1.5, sm: 2 },
+              p: { xs: 2, sm: 3 },
               backgroundColor: '#F8F8F8',
               borderRadius: '12px',
-              minWidth: '300px'
+              width: { xs: '100%', sm: 'auto' },
+              minWidth: { xs: 'auto', sm: '300px' },
+              maxWidth: { xs: '100%', sm: '400px' }
             }}>
-              <LanguageIcon sx={{ color: '#4A90E2', fontSize: '2rem' }} />
-              <Typography variant="h6" component="span" sx={{ color: '#2C2C2C', fontSize: '1.1rem' }}>
+              <LanguageIcon sx={{ color: '#4A90E2', fontSize: { xs: '1.5rem', sm: '2rem' } }} />
+              <Typography variant="h6" component="span" sx={{ 
+                color: '#2C2C2C', 
+                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' }
+              }}>
                 humblepearl.com
               </Typography>
             </Box>

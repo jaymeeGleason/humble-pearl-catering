@@ -13,6 +13,9 @@ import crabBoil from './food/crab_boil.png';
 import flowerCupcakes from './food/flower_cupcakes.jpg';
 import grilledPineapples from './food/grilled_pineapples.JPG';
 import tacos from './food/tacos.jpg';
+import fridayPlate2 from './food/fridayPlate2.jpeg';
+import wrappedSweets from './food/wrappedSweets.jpeg';
+import tacoBar from './food/tacoBar.jpg';
 
 // Event images (add your event photos here)
 // import event1 from './events/event1.jpg';
@@ -35,6 +38,9 @@ export const images = {
     flowerCupcakes,
     grilledPineapples,
     tacos,
+    fridayPlate2,
+    wrappedSweets,
+    tacoBar,
   },
   events: {
     // Add your event images here
@@ -50,6 +56,7 @@ export const images = {
 export { 
   humblePearlLogo,
   baconShrimp, carrotCupcakes, carrotPotato, chickenRiceBowl, crabBoil, flowerCupcakes, grilledPineapples, tacos,
+  fridayPlate2, wrappedSweets, tacoBar,
   joeChristina
 };
 
